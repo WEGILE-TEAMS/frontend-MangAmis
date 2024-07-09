@@ -12,6 +12,7 @@
     display: inline-block;
     padding: 7px;
     width: fit-content; // Sesuaikan lebar container sesuai kebutuhan
+    height: fit-content;
 
     &::after,
     &::before {

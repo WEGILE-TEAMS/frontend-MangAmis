@@ -24,6 +24,8 @@ body {
   padding: 7px;
   width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .container-button::after, .container-button::before {
   position: absolute;
@@ -126,15 +128,16 @@ body {
 #login .container h2 span {
   color: #C11336;
 }
-#login .container .btn:nth-child(1) {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
 #login .logo {
   width: 40vw;
 }
 #login .logo img {
   width: 50%;
+}
+#login .container-button {
+  width: 100%;
+  height: 40%;
+  margin-top: 20px;
 }
 
 #home {
@@ -379,6 +382,412 @@ body {
   margin-bottom: 2px;
 }
 #home #new-update .container .manga-card .chp-title {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 2;
+}
+
+.base-detail {
+  background-color: black;
+}
+
+#detail {
+  width: 100%;
+  background-image: url("../../images/bg-detail.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 250px;
+}
+#detail .slug {
+  font-size: 25px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#detail .slug span {
+  color: #C11336;
+  font-weight: 400;
+}
+#detail .top-content {
+  width: 100%;
+  height: 70vh;
+}
+#detail .top-content .manga-cover {
+  width: 282px;
+  height: 400px;
+  margin-right: 40px;
+}
+#detail .top-content .manga-detail {
+  color: #FFFFFF;
+}
+#detail .top-content .manga-detail .author {
+  font-size: 20px;
+  font-weight: 300;
+}
+#detail .top-content .manga-detail .title {
+  color: #C11336;
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 100px;
+}
+#detail .top-content .manga-detail .synopsis {
+  width: 45vw;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -5%;
+}
+#detail .top-content .manga-detail .genres {
+  font-size: 14px;
+  font-weight: 600;
+}
+#detail .top-content .manga-detail .genres span {
+  color: #C11336;
+}
+#detail .top-content .btn-group {
+  margin-bottom: 7.5%;
+}
+#detail .top-content .btn-group .btn-master, #detail .top-content .btn-group .btn-primary, #detail .top-content .btn-group .btn-secondary {
+  padding: 11px 45px;
+}
+#detail .top-content .btn-group .container-button {
+  width: 100%;
+}
+#detail .chapter-list h5 {
+  color: #FFFFFF;
+  font-weight: 800;
+  text-align: left;
+  line-height: 60px;
+  word-spacing: -0.5px;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+#detail .chapter-list .chapter-item {
+  text-decoration: none;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+}
+#detail .chapter-list .chapter-item .chapter-cover {
+  width: 160px;
+  height: 160px;
+  background-color: gray;
+}
+#detail .chapter-list .chapter-item .chapter-title {
+  font-size: 24px;
+  margin-left: 40px;
+}
+#detail .chapter-list .chapter-item .chapter-views .eye-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  background-image: url("../../images/eye.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#detail .chapter-list .chapter-item span {
+  font-weight: 300;
+}
+#detail .chapter-list .chapter-item:hover {
+  color: #C11336;
+}
+#detail .chapter-list .chapter-item:hover .eye-icon {
+  background-image: url("../../images/eye-red.png");
+}
+#detail #simillar-manga {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 30px;
+}
+#detail #simillar-manga .container {
+  margin-top: 74px;
+}
+#detail #simillar-manga .container h5 {
+  font-size: 40px;
+  font-weight: 800;
+}
+#detail #simillar-manga .container .lines {
+  width: 45%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+#detail #simillar-manga .container .manga-card {
+  width: 20vw;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 70px;
+}
+#detail #simillar-manga .container .manga-card .img {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 1s;
+}
+#detail #simillar-manga .container .manga-card .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 1;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+#detail #simillar-manga .container .manga-card .chp-title {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 2;
+}
+#detail #simillar-manga .container .manga-card:hover .img {
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#read-manga {
+  width: 100%;
+  background-image: url("../../images/bg-cover.png");
+}
+#read-manga .bg-dark-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding-top: 20%;
+}
+#read-manga .bg-dark-group .bg-dark-item {
+  width: 100%;
+  height: 150vh;
+  background-image: url("../../images/bg-dark.png");
+  background-size: contain;
+  margin-bottom: 120vh;
+}
+#read-manga .container {
+  position: relative;
+  z-index: 2;
+  padding-top: 15%;
+}
+#read-manga .container .slug {
+  font-size: 25px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#read-manga .container .slug span {
+  color: #C11336;
+  font-weight: 400;
+}
+#read-manga .container .top-content {
+  margin-bottom: 80px;
+}
+#read-manga .container .top-content h5.chapter-number {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 100px;
+  letter-spacing: -2%;
+  color: #FFFFFF;
+}
+#read-manga .container .top-content h5.chapter-number span {
+  color: #C11336;
+}
+#read-manga .container .top-content h5.chapter-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: -2%;
+  color: #FFFFFF;
+}
+#read-manga .container .top-content h5.chapter-title span {
+  color: #C11336;
+}
+#read-manga .container .top-content .btn-group {
+  width: 35vw;
+}
+#read-manga .container .top-content .btn-group .container-button {
+  width: 48%;
+}
+#read-manga .container .top-content .btn-group .container-button .btn-master, #read-manga .container .top-content .btn-group .container-button .btn-primary, #read-manga .container .top-content .btn-group .container-button .btn-secondary {
+  padding: 11px 45px;
+}
+#read-manga .container .manga-panel {
+  width: 100%;
+}
+#read-manga .container .manga-panel img {
+  width: 100%;
+}
+#read-manga .container .manga-panel .manga-item {
+  width: 100%;
+  height: 250vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#read-manga .manga-bottom {
+  width: 100%;
+  background-image: url("../../images/bg-dark.png");
+  background-size: cover;
+}
+#read-manga .manga-bottom .btn-group {
+  margin-bottom: 50px;
+}
+#read-manga .manga-bottom .manga-detail {
+  padding-bottom: 150px;
+  color: #FFFFFF;
+}
+#read-manga .manga-bottom .manga-detail .manga-cover {
+  width: 282px;
+  height: 400px;
+  margin-right: 40px;
+}
+#read-manga .manga-bottom .manga-detail .author {
+  font-size: 20px;
+  font-weight: 300;
+}
+#read-manga .manga-bottom .manga-detail .manga-title {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 100px;
+}
+#read-manga .manga-bottom .manga-detail .manga-title span {
+  color: #C11336;
+}
+#read-manga .manga-bottom .manga-detail .synopsis {
+  width: 45vw;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -5%;
+}
+#read-manga .manga-bottom .manga-detail .chapter-groups {
+  width: 150%;
+}
+#read-manga .manga-bottom .manga-detail .chapter-groups .container-button {
+  width: 20%;
+  margin-right: 25px;
+}
+#read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-master, #read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-primary, #read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-secondary {
+  padding: 11px 20px;
+  background-color: transparent;
+}
+
+#manga {
+  width: 100vw;
+  height: 110vh;
+  background-image: url("../../images/bg-manga.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#manga #top-manga .bg-line {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+#manga #top-manga .bg-line .bg {
+  width: 95vw;
+  height: 90vh;
+  background-image: url("../../images/bg-line-manga.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+#manga #top-manga .container {
+  width: 100%;
+  padding-top: 74px;
+  color: #FFFFFF;
+}
+#manga #top-manga .container h5 {
+  font-size: 40px;
+  font-weight: 800;
+}
+#manga #top-manga .container .lines {
+  width: 45%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  margin-bottom: 40px;
+}
+#manga #top-manga .container .manga-card {
+  width: 20vw;
+  margin-bottom: 70px;
+}
+#manga #top-manga .container .manga-card .img {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#manga #top-manga .container .manga-card .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 1;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+#manga #top-manga .container .manga-card .chp-title {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 2;
+}
+#manga #new-update .container {
+  width: 100%;
+  padding-top: 74px;
+}
+#manga #new-update .container h5 {
+  font-size: 40px;
+  font-weight: 800;
+}
+#manga #new-update .container .lines {
+  width: 45%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+#manga #new-update .container .manga-card {
+  width: 20vw;
+  margin-bottom: 70px;
+}
+#manga #new-update .container .manga-card .img {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#manga #new-update .container .manga-card .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 1;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+#manga #new-update .container .manga-card .chp-title {
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
