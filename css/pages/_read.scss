@@ -103,16 +103,15 @@
     .manga-bottom {
         width: 100%;
 
-        background-image: url('../../images/bg-dark.png');
+        background-image: url('../../images/bg-bottom-manga.png');
         background-size: cover;
+        padding-bottom: 20%;
 
         .btn-group {
             margin-bottom: 50px;
         }
 
         .manga-detail {
-                padding-bottom: 150px;
-
             .manga-cover {
                 width: 282px;
                 height: 400px;

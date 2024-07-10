@@ -1,6 +1,8 @@
 // Requirement
 @import 'shared/fonts';
 @import 'components/button';
+@import 'components/navbar';
+@import 'components/footer';
 
 // Pages
 @import 'pages/login';
@@ -21,4 +23,6 @@ html {
 
 body {
     width: 100%;
+
+    overflow-x: hidden;
 }

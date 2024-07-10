@@ -82,6 +82,174 @@ body {
   background-color: #C11336;
 }
 
+#navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  margin-top: 20px;
+}
+#navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#navbar .navbar-brand img {
+  margin-right: 25px !important;
+}
+#navbar .navbar-brand .lines {
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+#navbar .navbar-brand .navbar_logo {
+  width: 130px;
+  height: auto;
+}
+#navbar .nav-item {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2.5px solid transparent;
+}
+#navbar .nav-item .navbar-items {
+  padding: 0;
+  color: #7A7A7A;
+  font-size: 16px;
+  font-weight: 500 !important;
+}
+#navbar .nav-item:hover, #navbar .nav-item.active {
+  border-bottom: 2.5px solid #C11336;
+}
+#navbar .nav-item:hover .navbar-items, #navbar .nav-item.active .navbar-items {
+  color: #C11336;
+}
+#navbar hr {
+  width: 30vw;
+  height: 2px;
+  background-color: #FFFFFF;
+}
+#navbar .search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 16px;
+}
+#navbar .search-box .lines {
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+#navbar .search-box .profile {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  border: 2px solid #FFFFFF;
+  margin: 0 25px;
+}
+#navbar .search-box .profile .circle {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+}
+#navbar .search-box input.form-control {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 15;
+  color: #FFFFFF;
+  border: none;
+}
+#navbar .search-box input.form-control::-moz-placeholder {
+  color: #FFFFFF;
+}
+#navbar .search-box input.form-control::placeholder {
+  color: #FFFFFF;
+}
+#navbar .search-box input.form-control::-ms-clear {
+  width: 0;
+  height: 0;
+  display: none !important;
+}
+#navbar .search-box .icon-search {
+  position: absolute;
+  top: 21%;
+  right: 5%;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  margin: 0;
+  background-image: url("/images/bg-footer.jpg");
+  background-size: cover; /* or contain, depending on your preference */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 150px;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+#footer .footer-content {
+  text-decoration: none;
+}
+
+#footer .col h6 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 20px;
+  line-height: 10px;
+  color: #ffffff;
+}
+
+#footer .col h6 span {
+  color: #c11336;
+}
+
+#footer .logo {
+  height: 75%;
+  width: 100%;
+  margin-bottom: -60px;
+}
+
+#footer .logo img {
+  width: auto;
+  height: 100%;
+  margin-left: 38.75vw;
+}
+
+#footer .copyright-container {
+  padding-top: 75px;
+  width: 100%;
+  height: 50% !important;
+}
+
+#footer .copyright-container h6 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 20px;
+  line-height: 10px;
+  color: #ffffff;
+}
+
+#footer .copyright-container h6 span {
+  color: #c11336;
+}
+
+#footer .container {
+  margin-top: 10px !important;
+  /* background-color: red; */
+}
+
 #login {
   margin: 0;
   width: 100vw;
@@ -156,11 +324,11 @@ body {
   height: 100vh;
   position: absolute;
   z-index: 0;
-  bottom: 0;
+  bottom: -5%;
 }
 #home #top-manga .bg-line .bg {
   width: 95vw;
-  height: 90vh;
+  height: 85vh;
   background-image: url("../../images/bg-line.png");
   background-size: cover;
   background-position: bottom;
@@ -639,14 +807,14 @@ body {
 }
 #read-manga .manga-bottom {
   width: 100%;
-  background-image: url("../../images/bg-dark.png");
+  background-image: url("../../images/bg-bottom-manga.png");
   background-size: cover;
+  padding-bottom: 20%;
 }
 #read-manga .manga-bottom .btn-group {
   margin-bottom: 50px;
 }
 #read-manga .manga-bottom .manga-detail {
-  padding-bottom: 150px;
   color: #FFFFFF;
 }
 #read-manga .manga-bottom .manga-detail .manga-cover {
@@ -807,4 +975,5 @@ html {
 
 body {
   width: 100%;
+  overflow-x: hidden;
 }/*# sourceMappingURL=main.css.map */
