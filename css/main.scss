@@ -1,10 +1,15 @@
 // Requirement
 @import 'shared/fonts';
 @import 'components/button';
+@import 'components/navbar';
+@import 'components/footer';
 
 // Pages
 @import 'pages/login';
 @import 'pages/home';
+@import 'pages/detail';
+@import 'pages/read';
+@import 'pages/manga';
 
 * {
     padding: 0;
@@ -18,4 +23,6 @@ html {
 
 body {
     width: 100%;
+
+    overflow-x: hidden;
 }

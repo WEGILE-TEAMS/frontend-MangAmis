@@ -1,5 +1,7 @@
 #home {
 
+    overflow: hidden;
+
     #top-manga {
         position: relative;
 
@@ -16,11 +18,11 @@
 
             position: absolute;
             z-index: 0;
-            bottom: 0;
+            bottom: -5%;
             
             .bg {
                 width: 95vw;
-                height: 90vh;
+                height: 85vh;
 
                 background-image: url('../../images/bg-line.png');
                 background-size: cover;
@@ -83,7 +85,7 @@
                 .btn-secondary {
                     width: fit-content !important;
                     padding: 6px 30px;
-                    margin-top: 5px;
+                    // margin-top: 5px;
     
                     color: black;
                     background-color: $white;
@@ -113,4 +115,214 @@
             }
         }
     }
+
+    #history {
+        width: 100%;
+        height: 140vh;
+    
+        background-image: url('../../images/bg-history.png');
+        background-size: cover;
+
+        h4.title {
+            font-weight: map-get($map: $font-weigths, $key: semibold);
+            color: $white;
+            font-size: 48px;
+            line-height: 70px;
+            letter-spacing: -0.5px;
+
+            text-align: right;
+        }
+
+        .lines {
+            width: 45%;
+            height: 2px;
+
+            border-radius: 2px;
+            background-color: $white;
+
+            margin-bottom: 40px;
+        }
+
+        .history-content {
+            
+            height: 21vw;
+
+            .details {
+                max-height: 100%;
+                margin-right: 25px;
+    
+                h5 {
+                    color: $white;
+                    font-size: 64px;
+                    font-weight: map-get($map: $font-weigths, $key: extrabold);
+                    text-align: right;
+                    line-height: 60px;
+                    word-spacing: -0.5px;
+                }
+    
+                p {
+                    max-width: 32vw;
+                    text-align: right;
+    
+                    color: $light-grey;
+                    font-size: 20px;
+                    font-weight: map-get($map: $font-weigths, $key: light);
+               
+                    &:nth-child(1) {
+                        height: fit-content;
+                        margin-bottom: 5px;
+                    }
+    
+                    &:nth-child(2) {
+                        word-spacing: -0.5px;
+                    }
+                }
+            }
+    
+            .cover-manga-active {
+                width: 200px;
+                height: 320px;
+    
+                background-image: url('../../images/chainsaw-cover.png');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .group-btn {
+            margin-top: 40px;
+
+            .container-button {
+                width: 200px;
+
+                margin-left: 20px;
+
+                .btn {
+                    padding: 10px;
+                }
+            }
+        }
+
+
+        .history-second {
+            margin-top: 50px;
+            .cover-manga {
+                margin-left: 25px;
+
+                height: 300px;
+
+                background-size: cover;
+                background-position: center;
+
+                &:nth-child(1) {
+                    background-image: url('../../images/gachi-book.jpg');
+                }
+                &:nth-child(2) {
+                    background-image: url('../../images/sakamoto-book.jpg');
+                }
+                &:nth-child(3) {
+                    background-image: url('../../images/jujutsu-book.jpg');
+
+                }
+            }
+
+            .indicator {
+                margin-top: 20px;
+
+                height: fit-content;
+                .container-button {
+                    .btn {
+                        padding: 10px;
+                        background-color: $light-grey;
+    
+                        img {
+                            width: 10px;
+                            height: 10px;
+                        }
+    
+                    }
+    
+                    &:nth-child(1) {
+                        margin-right: 20px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .lines {
+                    width: 58.7%;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    margin-bottom: 0;
+                    background-color: $light-grey;
+                }
+
+                h5 {
+                    color: $light-grey;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    #new-update {
+        width: 100%;
+
+        .container {
+            margin-top: 74px;
+
+            h5 {
+                font-size: 40px;
+                font-weight: map-get($map: $font-weigths, $key: extrabold);
+            }
+
+            .lines {
+                width: 45%;
+                height: 2px;
+    
+                border-radius: 2px;
+                background-color: black;
+    
+                margin-bottom: 40px;
+            }
+
+            .manga-card {
+                width: 20vw;
+
+                margin-bottom: 70px;
+
+                .img{
+                    width: 100%;
+                    height: 450px;
+
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                }
+
+                .title {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-lines: 1;
+
+                    font-size: 32px;
+                    font-weight: map-get($map: $font-weigths, $key: semibold);
+                
+                    margin-top: 15px;
+                    margin-bottom: 2px;
+
+                }
+
+                .chp-title {
+                    font-size: 20px;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-lines: 2;
+                }
+            }
+        }
+    } 
 }

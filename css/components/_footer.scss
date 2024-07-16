@@ -1,0 +1,61 @@
+#footer {
+    margin: 0;
+    background-image: url("/images/bg-footer.jpg");
+    background-size: cover; /* or contain, depending on your preference */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 150px;
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: black;
+}
+
+#footer .footer-content {
+    text-decoration: none;
+}
+
+#footer .col h6 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 20px;
+    line-height: 10px;
+    color: #ffffff;
+}
+#footer .col h6 span {
+    color: #c11336;
+}
+#footer .logo {
+    height: 75%;
+    width: 100%;
+    margin-bottom: -60px;
+}
+#footer .logo img {
+    width: auto;
+    height: 100%;
+    margin-left: 38.75vw;
+}
+
+#footer .copyright-container {
+    padding-top: 75px;
+    width: 100%;
+    height: 50% !important;
+}
+
+#footer .copyright-container h6 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 20px;
+    line-height: 10px;
+    color: #ffffff;
+}
+#footer .copyright-container h6 span {
+    color: #c11336;
+}
+
+#footer .container {
+    margin-top: 10px !important;
+    /* background-color: red; */
+}

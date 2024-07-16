@@ -1,0 +1,125 @@
+#navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+
+    margin-top: 20px;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        img {
+            margin-right: 25px !important;
+        }
+
+        .lines {
+            display: block;
+            flex-grow: 1;
+            height: 1px;
+            background-color: $white;
+        }
+
+        .navbar_logo {
+            width: 130px;
+            height: auto;
+        }
+    }
+
+    .nav-item {
+        width: fit-content;
+        border-bottom: 2.5px solid transparent;
+
+        .navbar-items {
+            padding: 0;
+            color: $light-grey;
+
+            font-size: 16px;
+            font-weight: map-get($map: $font-weigths, $key: medium) !important;
+        }
+
+        
+        &:hover, &.active {
+            .navbar-items {
+                color: $red;
+            }
+            border-bottom: 2.5px solid $red;
+        }
+    }
+
+    hr {
+        width: 30vw;
+        height: 2px;
+        background-color: $white;
+    }
+
+    .search-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        margin-left: 16px;
+
+        .lines {
+            display: block;
+            flex-grow: 1;
+            height: 1px;
+            background-color: $white;
+        }
+
+        .profile {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 100%;
+            border: 2px solid $white;
+
+            margin: 0 25px;
+
+            .circle {
+                width: 45px;
+                height: 45px;
+
+                background-color: rgba($color: $white, $alpha: 0.5);
+                border-radius: 100%;
+            }
+
+        }
+        input.form-control {
+            position: relative;
+
+            background-color: rgba($color: $white, $alpha: 0.5) !important;
+            font-size: 15;
+            color: $white;
+
+            border: none;
+
+            &::placeholder {
+                color: $white;
+            }
+
+            &::-ms-clear {
+                width: 0;
+                height: 0;
+                display: none !important;
+            }
+        }
+
+        .icon-search {
+            position: absolute;
+            top: 21%;
+            right: 5%;
+
+            width: 24px;
+            height: 24px;
+
+            background-image: url('../../images/search.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
