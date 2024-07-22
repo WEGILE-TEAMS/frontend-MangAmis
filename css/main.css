@@ -19,67 +19,67 @@ body {
 }
 
 .container-button {
-  position: relative;
-  display: inline-block;
-  padding: 7px;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  position: relative !important;
+  display: inline-block !important;
+  padding: 7px !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
 }
 .container-button::after, .container-button::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 45%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  position: absolute !important;
+  content: "" !important;
+  width: 100% !important;
+  height: 45% !important;
+  border-radius: 2px !important;
+  box-sizing: border-box !important;
 }
 .container-button::after {
-  top: 0;
-  right: 0;
-  border: 3px solid #7A7A7A;
-  border-bottom: none;
+  top: 0 !important;
+  right: 0 !important;
+  border: 3px solid #7A7A7A !important;
+  border-bottom: none !important;
 }
 .container-button::before {
-  bottom: 0;
-  right: 0;
-  border: 3px solid #7A7A7A;
-  border-top: none;
+  bottom: 0 !important;
+  right: 0 !important;
+  border: 3px solid #7A7A7A !important;
+  border-top: none !important;
 }
 
 .btn-master, .btn-secondary, .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 92px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  border: none;
-  border-radius: 0;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 15px 92px !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .btn-primary {
-  background-color: #C11336;
-  color: white;
+  background-color: #C11336 !important;
+  color: white !important;
 }
 .btn-primary:hover {
-  background-color: #323232;
+  background-color: #323232 !important;
 }
 
 .btn-secondary {
-  background-color: #323232;
-  color: white;
+  background-color: #323232 !important;
+  color: white !important;
 }
 .btn-secondary.btn-master::after, .btn-secondary::after, .btn-secondary.btn-master::before, .btn-secondary::before {
-  border-color: #323232;
+  border-color: #323232 !important;
 }
 .btn-secondary:hover {
-  background-color: #C11336;
+  background-color: #C11336 !important;
 }
 
 #navbar {
@@ -424,14 +424,23 @@ body {
 #home #history .history-content .details {
   max-height: 100%;
   margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
 }
 #home #history .history-content .details h5 {
+  width: 500px;
   color: #FFFFFF;
   font-size: 64px;
   font-weight: 800;
   text-align: right;
   line-height: 60px;
   word-spacing: -0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 1;
 }
 #home #history .history-content .details p {
   max-width: 32vw;
@@ -489,7 +498,7 @@ body {
   height: fit-content;
 }
 #home #history .history-second .indicator .container-button .btn {
-  padding: 10px;
+  padding: 15px !important;
   background-color: #7A7A7A;
 }
 #home #history .history-second .indicator .container-button .btn img {
@@ -501,7 +510,7 @@ body {
   transform: rotate(180deg);
 }
 #home #history .history-second .indicator .lines {
-  width: 58.7%;
+  width: 56.7%;
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 0;
@@ -595,10 +604,15 @@ body {
   font-weight: 300;
 }
 #detail .top-content .manga-detail .title {
-  color: #C11336;
+  color: #C11336; /* Make sure $red is defined in your CSS or SCSS */
   font-size: 96px;
   font-weight: 800;
   line-height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Limits the number of lines */
+  text-overflow: ellipsis; /* Ensures that the overflow is handled with ellipsis */
 }
 #detail .top-content .manga-detail .synopsis {
   width: 45vw;
@@ -616,12 +630,16 @@ body {
 }
 #detail .top-content .btn-group {
   margin-bottom: 7.5%;
+  width: 30vw !important;
 }
 #detail .top-content .btn-group .btn-master, #detail .top-content .btn-group .btn-primary, #detail .top-content .btn-group .btn-secondary {
-  padding: 11px 45px;
+  padding: 11px 45px !important;
+}
+#detail .top-content .btn-group .btn-secondary {
+  width: 100% !important;
 }
 #detail .top-content .btn-group .container-button {
-  width: 100%;
+  width: 100% !important;
 }
 #detail .chapter-list h5 {
   color: #FFFFFF;
@@ -651,6 +669,11 @@ body {
 #detail .chapter-list .chapter-item .chapter-title {
   font-size: 24px;
   margin-left: 40px;
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
 }
 #detail .chapter-list .chapter-item .chapter-views .eye-icon {
   width: 30px;
@@ -787,10 +810,11 @@ body {
   width: 35vw;
 }
 #read-manga .container .top-content .btn-group .container-button {
-  width: 48%;
+  width: 48% !important;
+  margin-left: 20px !important;
 }
 #read-manga .container .top-content .btn-group .container-button .btn-master, #read-manga .container .top-content .btn-group .container-button .btn-primary, #read-manga .container .top-content .btn-group .container-button .btn-secondary {
-  padding: 11px 45px;
+  padding: 11px 45px !important;
 }
 #read-manga .container .manga-panel {
   width: 100%;
@@ -812,7 +836,7 @@ body {
   padding-bottom: 20%;
 }
 #read-manga .manga-bottom .btn-group {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 #read-manga .manga-bottom .manga-detail {
   color: #FFFFFF;
@@ -845,12 +869,18 @@ body {
   width: 150%;
 }
 #read-manga .manga-bottom .manga-detail .chapter-groups .container-button {
-  width: 20%;
-  margin-right: 25px;
+  width: 20% !important;
+  margin-right: 25px !important;
 }
 #read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-master, #read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-primary, #read-manga .manga-bottom .manga-detail .chapter-groups .container-button .btn-secondary {
-  padding: 11px 20px;
-  background-color: transparent;
+  padding: 11px 20px !important;
+  background-color: transparent !important;
+}
+#read-manga .manga-bottom .manga-detail .chapter-groups .container-button:hover a {
+  color: #C11336 !important;
+}
+#read-manga .manga-bottom .manga-detail .chapter-groups .container-button a.active {
+  color: #C11336 !important;
 }
 
 #manga {
@@ -956,6 +986,109 @@ body {
   margin-bottom: 2px;
 }
 #manga #new-update .container .manga-card .chp-title {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 2;
+}
+
+#profile {
+  width: 100%;
+}
+#profile .profile-information {
+  padding-top: 10%;
+  width: 100%;
+  height: 130vh;
+  background-image: url("../../images/bg-profile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#profile .profile-information h5 {
+  color: #FFFFFF;
+  font-size: 60px;
+  font-weight: 700;
+}
+#profile .profile-information .photo-profile {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  border: 3px solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#profile .profile-information .photo-profile .inner-img {
+  width: 13.5vw;
+  height: 13.5vw;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+}
+#profile .profile-information .form-section {
+  margin-left: 100px;
+}
+#profile .profile-information .form-section .form-group {
+  display: flex !important;
+  margin-bottom: 30px;
+}
+#profile .profile-information .form-section .form-group label {
+  width: 250px;
+  margin-right: 20px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 24px;
+}
+#profile .profile-information .form-section .form-group .form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFFFFF;
+  border-radius: 0;
+}
+#profile .profile-information .form-section .form-group .form-control:focus, #profile .profile-information .form-section .form-group .form-control:active {
+  border: none !important;
+  border-bottom: 2px solid #FFFFFF;
+}
+#profile #new-update {
+  width: 100%;
+}
+#profile #new-update .container {
+  margin-top: -25%;
+}
+#profile #new-update .container h5 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+#profile #new-update .container .lines {
+  width: 45%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  margin-bottom: 40px;
+}
+#profile #new-update .container .manga-card {
+  width: 20vw;
+  margin-bottom: 70px;
+}
+#profile #new-update .container .manga-card .img {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#profile #new-update .container .manga-card .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 1;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+#profile #new-update .container .manga-card .chp-title {
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;

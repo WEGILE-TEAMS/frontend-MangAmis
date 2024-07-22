@@ -1,0 +1,135 @@
+#profile {
+    width: 100%;
+
+    .profile-information {
+        
+        padding-top: 10%;
+
+        width: 100%;
+        height: 130vh;
+
+        background-image: url('../../images/bg-profile.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h5 {
+            color: $white;
+            font-size: 60px;
+            font-weight: map-get($map: $font-weigths, $key: bold);
+        }
+
+        .photo-profile {
+            width: 15vw;
+            height: 15vw;
+
+            border-radius: 100%;
+            border: 3px solid $white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .inner-img {
+                width: 13.5vw;
+                height: 13.5vw;
+
+                border-radius: 100%;
+                background-color: $white;
+            }
+        }
+
+        .form-section {
+            margin-left: 100px;
+
+            .form-group {
+                display: flex !important;
+                margin-bottom: 30px;
+
+                label {
+                    width: 250px;
+                    margin-right: 20px;
+
+                    color: $white;
+                    font-weight: map-get($map: $font-weigths, $key: semibold);
+                    font-size: 24px;
+                }
+
+                .form-control {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid $white;
+                    border-radius: 0;
+
+                    &:focus, &:active {
+                        border: none !important;
+                        border-bottom: 2px solid $white;
+                    }
+                }
+            }
+        }
+    }
+
+    #new-update {
+        width: 100%;
+
+        .container {
+            margin-top: -25%;
+
+            h5 {
+                font-size: 40px;
+                font-weight: map-get($map: $font-weigths, $key: extrabold);
+                color: $white;
+            }
+
+            .lines {
+                width: 45%;
+                height: 2px;
+    
+                border-radius: 2px;
+                background-color: $white;
+    
+                margin-bottom: 40px;
+            }
+
+            .manga-card {
+                width: 20vw;
+
+                margin-bottom: 70px;
+
+                .img{
+                    width: 100%;
+                    height: 450px;
+
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                }
+
+                .title {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-lines: 1;
+
+                    font-size: 32px;
+                    font-weight: map-get($map: $font-weigths, $key: semibold);
+                
+                    margin-top: 15px;
+                    margin-bottom: 2px;
+
+                }
+
+                .chp-title {
+                    font-size: 20px;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-lines: 2;
+                }
+            }
+        }
+    } 
+}

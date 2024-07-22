@@ -47,11 +47,16 @@
             }
 
             .title {
-                color: $red;
+                color: $red; /* Make sure $red is defined in your CSS or SCSS */
                 font-size: 96px;
                 font-weight: map-get($map: $font-weigths, $key: extrabold);
-                
                 line-height: 100px;
+                overflow: hidden;
+                
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2; /* Limits the number of lines */
+                text-overflow: ellipsis; /* Ensures that the overflow is handled with ellipsis */
             }
 
             .synopsis {
@@ -76,12 +81,17 @@
         .btn-group {
             margin-bottom: 7.5%;
 
+            width: 30vw !important;
             .btn-master {
-                padding: 11px 45px;
+                padding: 11px 45px !important;
+            }
+
+            .btn-secondary {
+                width: 100% !important;
             }
             
             .container-button {
-                width: 100%;
+                width: 100% !important;
             }
         }
     }
@@ -123,6 +133,12 @@
             .chapter-title {
                 font-size: 24px;
                 margin-left: 40px;
+
+                width: 400px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: block;
             }
 
             .chapter-views {

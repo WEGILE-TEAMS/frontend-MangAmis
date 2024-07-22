@@ -150,14 +150,26 @@
             .details {
                 max-height: 100%;
                 margin-right: 25px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: end;
     
                 h5 {
+                    width: 500px;
+
                     color: $white;
                     font-size: 64px;
                     font-weight: map-get($map: $font-weigths, $key: extrabold);
                     text-align: right;
                     line-height: 60px;
                     word-spacing: -0.5px;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-lines: 1;
                 }
     
                 p {
@@ -231,8 +243,9 @@
 
                 height: fit-content;
                 .container-button {
+                    
                     .btn {
-                        padding: 10px;
+                        padding: 15px !important;
                         background-color: $light-grey;
     
                         img {
@@ -249,7 +262,7 @@
                 }
 
                 .lines {
-                    width: 58.7%;
+                    width: 56.7%;
                     margin-left: 25px;
                     margin-right: 25px;
                     margin-bottom: 0;

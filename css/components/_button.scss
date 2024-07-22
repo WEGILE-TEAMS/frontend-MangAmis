@@ -8,59 +8,59 @@
 @import '../shared/fonts';
 
 .container-button {
-    position: relative;
-    display: inline-block;
-    padding: 7px;
-    width: fit-content; // Sesuaikan lebar container sesuai kebutuhan
-    height: fit-content;
+    position: relative !important;
+    display: inline-block !important;
+    padding: 7px !important;
+    width: fit-content !important; // Sesuaikan lebar container sesuai kebutuhan
+    height: fit-content !important;
 
     &::after,
     &::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 45%;
-        border-radius: 2px;
-        box-sizing: border-box;
+        position: absolute !important;
+        content: '' !important;
+        width: 100% !important;
+        height: 45% !important;
+        border-radius: 2px !important;
+        box-sizing: border-box !important;
     }
 
     &::after {
-        top: 0;
-        right: 0;
-        border: 3px solid $light-grey;
-        border-bottom: none;
+        top: 0 !important;
+        right: 0 !important;
+        border: 3px solid $light-grey !important;
+        border-bottom: none !important;
     }
 
     &::before {
-        bottom: 0;
-        right: 0;
-        border: 3px solid $light-grey;
-        border-top: none;
+        bottom: 0 !important;
+        right: 0 !important;
+        border: 3px solid $light-grey !important;
+        border-top: none !important;
     }
 }
 
 .btn-master {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 92px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: map-get($map: $font-weigths, $key: medium);
-    border: none;
-    border-radius: 0;
-    position: relative;
-    width: 100%; // Tombol akan mengikuti lebar container
-    box-sizing: border-box; // Ensure padding is included in the element's total width and height
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px 92px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: map-get($map: $font-weigths, $key: medium) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    position: relative !important;
+    width: 100% !important; // Tombol akan mengikuti lebar container
+    box-sizing: border-box !important; // Ensure padding is included in the element's total width and height
 }
 
 .btn-primary {
     @extend .btn-master;
-    background-color: $red;
-    color: white;
+    background-color: $red !important;
+    color: white !important;
 
     &:hover {
-        background-color: $dark-grey;
+        background-color: $dark-grey !important;
     }
 }
 
@@ -69,14 +69,14 @@
     &.btn-master {
         &::after,
         &::before {
-            border-color: $dark-grey;
+            border-color: $dark-grey !important;
         }
     }
 
-    background-color: $dark-grey;
-    color: white;
+    background-color: $dark-grey !important;
+    color: white !important;
 
     &:hover {
-        background-color: $red;
+        background-color: $red !important;
     }
 }
