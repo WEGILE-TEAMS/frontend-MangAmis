@@ -87,6 +87,10 @@
                 border-radius: 100%;
             }
 
+            &.active {
+                border-color: $red;
+            }
+
         }
         input.form-control {
             position: relative;
@@ -120,6 +124,63 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        .result {
+            position: absolute;
+            right: 10px;
+            top: 80px;
+            
+            border-radius: 5px;
+
+            .manga-item {
+                width: 300px;
+                padding: 10px 5px;
+
+                background-color: black;
+                border-bottom: 1px solid $white;
+
+                &:hover {
+                    background-color: $red;
+
+                    .text {
+                        .author {
+                            color: black;
+                        }
+                    }
+                }
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                
+                    margin-right: 20px;
+                }
+
+                .text {
+                    width: 80%;
+                    .names {
+                        text-wrap: nowrap;
+                        text-overflow: ellipsis;
+
+                        color: $white;
+                        font-size: 20px;
+                        font-weight: map-get($map: $font-weigths, $key: medium);
+
+                        margin-bottom: 5px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-lines: 1;
+
+                        margin-right: 5px;
+                    }
+
+                    .author {
+                        color: $red;
+                    }
+                }
+            }
         }
     }
 }

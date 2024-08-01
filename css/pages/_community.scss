@@ -1,0 +1,331 @@
+#community {
+    width: 100%;
+    height: 130vh;
+
+    background-image: url('../../images/bg-cover.png');
+
+    .layer1 {
+        width: 65vw;
+        height: 130vh;
+
+        background-color: black;
+
+        
+        
+        .container {
+            height: 130vh;
+            padding: 13% 5%;
+
+            position: relative;
+
+            .container-button {
+                width: 500px !important;
+                height: 7vh !important;
+
+                margin-bottom: 70px;
+
+                input.form-control {
+                    position: relative;
+        
+                    background-color: rgba($color: $white, $alpha: 0.5) !important;
+                    font-size: 15;
+                    color: $white;
+        
+                    border: none;
+        
+                    &::placeholder {
+                        color: $white;
+                    }
+        
+                    &::-ms-clear {
+                        width: 0;
+                        height: 0;
+                        display: none !important;
+                    }
+                }
+        
+                .icon-search {
+                    position: absolute;
+                    top: 21%;
+                    right: 5%;
+        
+                    width: 24px;
+                    height: 24px;
+        
+                    background-image: url('../../images/search.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .manga-list {
+                height: 90vh;
+
+                overflow-y: scroll;
+                
+                &::-webkit-scrollbar { 
+                    display: none; 
+                }
+
+                .manga-com {
+                    padding-left: 70px;
+                    margin-bottom: 32px;
+    
+                    .lines {
+                        width: 70%;
+                        height: 2px;
+    
+                        border-radius: 2px;
+                        background-color: $white;
+                    }
+    
+                    .manga-content {
+                        margin-top: 17px;
+                        padding: 17px;
+                        display: flex;
+                        align-items: center;
+    
+                        transition: background-color .3s ease-in-out;
+    
+                        img {
+                            width: 200px;
+                            height: 285px;
+    
+                            margin-right: 28px;
+                        }
+    
+                        .text {
+                            color: $white;
+    
+                            h5 {
+                                font-size: 35px;
+                                font-weight: map-get($map: $font-weigths, $key: semibold);
+                                letter-spacing: 2%;
+                            }
+    
+                            p {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+    
+                    &:hover {
+                        .manga-content {
+                            background-color: $red;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+#room-lists {
+    width: 100%;
+    height: 130vh;
+
+    background-image: url('../../images/bg-cover.png');
+
+    .container {
+        height: 130vh;
+        overflow-y: scroll;
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        .room-card {
+            .container-button {
+                margin-top: 14px;
+    
+                img {
+                    width: 635px;
+                    height: 338px;
+                    
+                    padding: 5px;
+                }
+    
+                &::after, &::before {
+                    border-color: $white !important;
+                }
+    
+            }
+            .left {
+                color: $white;
+                h5 {
+                    font-size: 48px;
+                    font-weight: map-get($map: $font-weigths, $key: medium);
+                
+                }
+    
+                .details-room {
+                    span {
+                        font-size: 24px;
+    
+                        &:nth-child(2) {
+                            color: $light-grey;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .lines {
+            margin-top: 80px;
+            margin-bottom: 40px;
+    
+            width: 100%;
+            height: 2px;
+    
+            background-color: $light-grey;
+        }
+    }
+}
+
+#detail-room {
+    width: 100%;
+
+    background-image: url('../../images/bg-cover.png');
+
+    padding-top: 120px;
+
+    .main-content {
+        height: 110vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar { 
+            background-color: transparent;
+        }
+    
+        .room-card {
+            margin-bottom: 60px;
+
+            .container-button {
+                margin-top: 14px;
+    
+                img {
+                    width: 635px;
+                    height: 338px;
+                    
+                    padding: 5px;
+                }
+    
+                &::after, &::before {
+                    border-color: $white !important;
+                }
+    
+            }
+            .left {
+                color: $white;
+                h5 {
+                    font-size: 48px;
+                    font-weight: map-get($map: $font-weigths, $key: medium);
+                
+                }
+    
+                .details-room {
+                    span {
+                        font-size: 24px;
+    
+                        &:nth-child(2) {
+                            color: $light-grey;
+                        }
+                    }
+                }
+            }
+        }
+
+        .chat-section {
+            .chat-item {
+                margin-bottom: 30px;
+
+                .left {
+                    .nameDate {
+                        margin-bottom: 5px;
+
+                        .name {
+                            font-size: 16px;
+                            font-weight: map-get($map: $font-weigths, $key: bold);
+                            color: $white;
+                        }
+
+                        .date {
+                            font-size: 16px;
+                            color: $light-grey;
+                        }
+                    }
+
+                    .text-box {
+                        padding: 10px 15px;
+                        background-color: $white;
+                    }
+                }
+
+                &.other {
+                    .left {
+                        .text-box {
+                            padding: 10px 15px;
+                            background-color: $light-grey;
+                        }
+                    }
+                }
+
+                .right {
+                    .btn {
+                        height: 100% !important;
+                        
+                        margin: 0 !important;
+                        margin-left: 30px !important;
+                        padding: 10px 20px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .input-chat {
+        width: 100%;
+        height: 20vh;
+
+        background-color: black;
+
+        .container-button {
+            width: 70% !important;
+            height: 60px !important;
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            .input-control {
+                position: relative;
+
+                width: 100%;
+                height: 100%;
+
+                padding: 20px 40px;
+            }
+
+            button {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                bottom: 10px;
+
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: transparent;
+                border: none;
+
+                img {
+                    width: 40px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}
